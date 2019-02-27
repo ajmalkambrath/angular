@@ -1,17 +1,17 @@
-### Angular 6
+# Angular 6
 
 - Angular 6 is focussed less on the underline framework and more on toolings and making easier
 - No major break down but it depends on Rxjs version 6 which come with major break down
 - Synchronise version number for Angular Framework, cli, material and SDK.
 
-# Animation
+#### Animation
  Pre :  import form '@angular/core
  New :  import from '@angular/animations
  
-# Removed support from <template> directive
+### Removed support from <template> directive
    should be used : <ng-template>
    
-# Registering Provider
+### Registering Provider
   providedIn: 'root' - Helpfull in treeshakable
   ```
   @Injectable({
@@ -19,7 +19,7 @@
 })
 ```
   
-# ngModelChange event
+### ngModelChange event
 Pre: we will get old data for handler 
 Now: updated value
 
@@ -28,26 +28,26 @@ If we have an event handler for the ngModelChange event that checked the value t
 the old value will be returned instead of the changed value.
 Now, in Angular 6, ngModelChange has emitted the value after the value is updated in the form control.
 
-# Angular elements
+### Angular elements
 - Ability to use angular component in other environment.
 
-# Ivy
+### Ivy
 - New gen rendering engine
 
-# Treeshaking
+### Treeshaking
 - unused code does not get used in our final bundle.
 
  
-### Angular CLI update
+## Angular CLI update
  
-# ng update <package>
+### ng update <package>
   Analyses angular app give up package updation
   
-# ng add
+### ng add
 - to add new capabities
 - ng add @angualar/material
 
-# Renamed config file
+### Renamed config file
 - Support for multiple project
 - angular.json instead of  angular-cli.json 
 
