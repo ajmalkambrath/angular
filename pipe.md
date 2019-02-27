@@ -1,12 +1,13 @@
-/*
-Angular pipes  : A way to write display-value transformations that you can declare in your HTML.
+
+### Angular pipes  
+A way to write display-value transformations that you can declare in your HTML.
 
 A pipe takes in data as input and transforms it to a desired output.
 
 Built-in pipes: DatePipe, UpperCasePipe, LowerCasePipe, CurrencyPipe, and PercentPipe. 
 
-Custom pipes:
-
+## Custom pipes:
+```
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({name: 'exponentialStrength'})
@@ -16,7 +17,7 @@ export class ExponentialStrengthPipe implements PipeTransform {
     return Math.pow(value, isNaN(exp) ? 1 : exp);
   }
 }
-
+```
 
 This pipe definition reveals the following key points:
 
@@ -31,16 +32,17 @@ transform :  Technically, it's optional; - Angular looks for and executes the tr
 You must include your pipe in the declarations array of the AppModule.
 
 
-Pure and impure pipes
+# Pure and impure pipes
 Angular executes a pure pipe only when it detects a pure change to the input value. 
 A pure change is either a change to a primitive input value (String, Number, Boolean, Symbol) or a changed object reference (Date, Array, Function, Object).
 
 Angular executes an impure pipe during every component change detection cycle. An impure pipe is called often, as often as every keystroke or mouse-move.
-
+```
 @Pipe({
   name: 'flyingHeroesImpure',
   pure: false
 })
+```
 
 The Angular AsyncPipe is an interesting example of an impure pipe. The AsyncPipe accepts a Promise or Observable as input and subscribes to the input automatically, eventually returning the emitted values.
 
@@ -50,4 +52,4 @@ This next example binds an Observable of message strings (message$) to a view wi
 
 
 
-*/
+
