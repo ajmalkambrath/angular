@@ -4,9 +4,13 @@ A way to write display-value transformations that you can declare in your HTML.
 
 A pipe takes in data as input and transforms it to a desired output.
 
-Built-in pipes: DatePipe, UpperCasePipe, LowerCasePipe, CurrencyPipe, and PercentPipe. 
+#### Built-in pipes: 
 
-## Custom pipes:
+```
+DatePipe, UpperCasePipe, LowerCasePipe, CurrencyPipe, and PercentPipe. 
+```
+
+#### Custom pipes:
 ```
 import { Pipe, PipeTransform } from '@angular/core';
 
