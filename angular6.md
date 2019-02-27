@@ -26,7 +26,12 @@
   providedIn: 'root'
 })
 ```
-  
+
+ ####  Allow HttpInterceptors to inject HttpClient
+ 
+Allow HttpInterceptors to inject HttpClient – Previously, an interceptor attempting to inject HttpClient directly would receive a circular dependency error, as HttpClient was constructed via a factory which injected the interceptor instances. Users want to inject HttpClient into interceptors to make supporting.
+
+
 #### ngModelChange event
 Pre: we will get old data for handler 
 Now: updated value
